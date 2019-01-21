@@ -1,0 +1,13 @@
+<p>Sending request</p>
+<script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "http://localhost:9000/test", true);
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    xhttp.onreadystatechange = function () {
+        if (this.status == 200) {
+            alert("Working :)");
+        }
+    };
+    var data = JSON.stringify({"content": "AJAX Request from APS System"});
+    xhttp.send(data);
+</script>
